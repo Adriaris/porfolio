@@ -1,0 +1,29 @@
+.navbar {
+
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-item {
+  text-decoration: none;
+  color: inherit; /* Mantiene el color degradado del texto */
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-item:hover, .navbar .nav-item.active {
+  color: var(--disco-800); /* Cambio de color al pasar el ratón */
+}

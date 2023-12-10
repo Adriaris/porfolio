@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  color-scheme: light dark;
+
+  --disco-50: #fcf3f9;
+  --disco-100: #fae9f4;
+  --disco-200: #f7d3ea;
+  --disco-300: #f2afd8;
+  --disco-400: #e97dbd;
+  --disco-500: #de56a4;
+  --disco-600: #cc3685;
+  --disco-700: #b0266a;
+  --disco-800: #882052;
+  --disco-900: #7a214c;
+  --disco-950: #4a0d2a;
+
+  --text-gradient: linear-gradient(to right, var(--disco-500), var(--disco-700));
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+.gradient-text {
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+}

@@ -1,0 +1,27 @@
+.intro-section {
+    text-align: center;
+ 
+    margin: auto;
+    padding: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+ 
+  }
+  
+  .profile-image {
+    border-radius: 50%;
+    border: 5px solid white;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+
+  
