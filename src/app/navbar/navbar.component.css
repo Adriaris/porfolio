@@ -1,29 +1,55 @@
-.navbar {
-
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+:root {
+  /* Definiciones de colores y degradado */
+  --text-gradient: linear-gradient(
+    to right,
+    var(--disco-500),
+    var(--disco-700)
+  );
+  --link-color: #dadada; /* Color gris para texto de enlaces */
+  --active-hover-color: #ffffff; /* Color blanco para hover y activo */
 }
 
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  color: gray; /* Texto gris por defecto */
+  text-decoration: none;
+  transition: color 0.3s, font-weight 0.3s; /* Transición suave para color y peso de fuente */
+}
 
-.navbar .logo {
-  font-size: 24px;
+.navbar-nav .nav-link .bi {
+  font-size: 1.3rem;
+  margin-right: 5px; /* Espacio entre ícono y texto */
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Efecto de degradado para el ícono */
+  transition: background 0.3s; /* Transición suave para el degradado */
+}
+
+/* Establece el texto a blanco y en negrita en hover o activo */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: white; /* Cambia a blanco */
   font-weight: bold;
 }
 
-.navbar .nav-links {
-  display: flex;
-  gap: 20px;
+/* Técnica para evitar el movimiento de íconos: envuelve el texto en un span y maneja el cambio de fuente en él */
+.navbar-nav .nav-link span {
+  font-weight: 400; /* Inicia con el peso de fuente normal */
+  transition: font-weight 0.1s; /* Transición suave para el peso de la fuente */
+  width: 5rem;
+  text-align: left;
 }
 
-.navbar .nav-item {
-  text-decoration: none;
-  color: inherit; /* Mantiene el color degradado del texto */
-  transition: color 0.3s ease;
+.navbar-nav .nav-link:hover span,
+.navbar-nav .nav-link.active span {
+  font-weight: bold; /* Cambia a negrita en hover o activo */
 }
 
-.navbar .nav-item:hover, .navbar .nav-item.active {
-  color: var(--disco-800); /* Cambio de color al pasar el ratón */
+.smaller-image {
+  width: 3rem;
+  height: auto;
 }
+
+/* Asegúrate de incluir las variables de color y cualquier otro ajuste de estilo global que desees. */

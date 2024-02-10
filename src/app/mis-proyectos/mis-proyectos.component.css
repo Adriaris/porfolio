@@ -1,0 +1,42 @@
+.proyectos-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  color: white; /* Mantenemos el color de texto principal en blanco para coherencia */
+}
+
+.proyectos-container p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: justify; /* Mantenemos la alineación de texto justificada para coherencia */
+}
+
+/*´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
+/* mis-proyectos.component.css */
+.proyecto-container {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px; /* Redondea los bordes */
+  margin-bottom: 20px; /* Espacio entre cada proyecto */
+  overflow: hidden; /* Asegura que no haya desbordamiento */
+}
+
+.titulo {
+}
+.subtitulo {
+  color: white;
+}
+
+.descripcion {
+  color: rgb(172, 172, 172);
+  font-style: italic;
+}
+
+.proyecto-text {
+  padding: 20px; /* Espaciado interior */
+}
+
+.proyecto-image img {
+  width: 100%; /* Ajusta el tamaño de la imagen */
+  height: auto;
+}

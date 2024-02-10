@@ -1,27 +1,169 @@
-.intro-section {
-    text-align: center;
- 
-    margin: auto;
-    padding: 50px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
- 
-  }
-  
-  .profile-image {
-    border-radius: 50%;
-    border: 5px solid white;
-    width: 200px;
-    margin-bottom: 20px;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-  }
-  
+.action-buttons {
+  margin-top: 20px;
+}
 
-  
+/* home.component.css */
+.btn {
+  background-color: transparent; /* Fondo transparente */
+  color: white !important; /* Color del texto inicial */
+  border: 3px solid var(--disco-500); /* Borde sólido con color inicial */
+  position: relative;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 30px; /* Botones redondeados */
+  font-size: 1.1rem;
+  outline: none;
+  transition: background-color 0.4s ease, border-color 0.4s ease,
+    transform 0.3s ease; /* Suaviza la transición de colores y transformación */
+}
+
+.btn:hover {
+  box-shadow: 0 4px 8px rgba(173, 3, 189, 0.2); /* Sombra para efecto de elevación */
+  background-image: var(
+    --text-gradient
+  ); /* Aplicación del degradado definido en :root al pasar el ratón */
+  border-color: white; /* Cambio de color del borde al pasar el ratón */
+  color: black; /* Cambio de color del texto al pasar el ratón */
+  transform: scale(1.05); /* Efecto de escala para dar sensación de elevación */
+}
+
+.btn:active {
+  transform: translateY(1px); /* Mueve el botón ligeramente hacia abajo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más pequeña para efecto de presión */
+}
+
+.white-text {
+  color: white;
+}
+
+.intro-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ajusta la altura mínima para que sea al menos igual a la altura de la ventana del navegador */
+}
+
+.container {
+  flex: 1; /* Permite que el contenedor se expanda y ocupe el espacio disponible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px !important;
+}
+
+.row {
+  width: 100%; /* Asegura que la fila ocupe todo el ancho disponible del contenedor */
+  display: flex;
+  justify-content: center;
+}
+
+/* Asegúrate de que estas clases no contradigan los estilos anteriores */
+.col-md-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Alinea los elementos internos verticalmente para cada columna */
+}
+
+/* Estilos para el contenido de introducción */
+.intro-content {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+}
+
+.intro-content h1,
+.intro-content p {
+  font-weight: 800;
+}
+
+.intro-content h1 {
+  font-size: 7rem;
+}
+
+.intro-content p {
+  font-size: 4rem;
+}
+
+/* Estilos para dispositivos móviles */
+
+.text-container {
+  display: flex; /* Habilita Flexbox */
+  flex-direction: column; /* Apila los hijos verticalmente */
+  justify-content: flex-end; /* Alinea los hijos al final del contenedor (parte inferior) */
+  height: 350px !important; /* Ajusta esto según la cantidad de texto que esperas tener */
+  overflow: hidden; /* Oculta el texto que exceda la altura del contenedor */
+}
+
+@media (max-width: 767px) {
+  .intro-content h1 {
+    font-size: 3.5rem; /* Tamaño de fuente más pequeño para h1 en móviles */
+  }
+
+  .intro-content p {
+    font-size: 2.3rem; /* Tamaño de fuente más pequeño para p en móviles */
+  }
+
+  .text-container {
+    display: flex; /* Habilita Flexbox */
+    flex-direction: column; /* Apila los hijos verticalmente */
+    justify-content: flex-end; /* Alinea los hijos al final del contenedor (parte inferior) */
+    height: 250px !important; /* Ajusta esto según la cantidad de texto que esperas tener */
+    overflow: hidden; /* Oculta el texto que exceda la altura del contenedor */
+  }
+}
+
+.span-desc {
+  color: rgb(158, 158, 158) !important;
+  font-size: 1.1rem;
+  font-family: "Poppins";
+  font-style: italic;
+}
+
+/* Estilo para la línea divisoria, si se desea agregar */
+.divider {
+  width: 100%;
+  border-top: 2px solid #000;
+  margin-top: auto;
+}
+
+.cursor {
+  opacity: 1;
+}
+
+.blinking {
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+/*´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
+
+/* Estilo para hacer la imagen más pequeña y centrada */
+.smaller-image {
+  max-width: 80%; /* Ajusta según la necesidad para cambiar el tamaño de la imagen */
+  height: auto;
+}
+
+.profile-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30rem; /* Controla el tamaño de la imagen */
+  height: auto; /* Asegura que el contenedor de la imagen sea circular */
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  position: static;
+  margin-top: 20px;
+}
+
+.img-fluid {
+  width: auto; /* Ajusta el tamaño de la imagen al de su contenedor */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 50%; /* Hace la imagen circular */
+}

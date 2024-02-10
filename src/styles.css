@@ -1,6 +1,4 @@
 :root {
-  color-scheme: light dark;
-
   --disco-50: #fcf3f9;
   --disco-100: #fae9f4;
   --disco-200: #f7d3ea;
@@ -13,21 +11,27 @@
   --disco-900: #7a214c;
   --disco-950: #4a0d2a;
 
-  --text-gradient: linear-gradient(to right, var(--disco-500), var(--disco-700));
+  --text-gradient: linear-gradient(
+    to right,
+    var(--disco-500),
+    var(--disco-700)
+  );
 }
 
 ::-webkit-scrollbar {
-    display: none;
-  }
-  
+  display: none;
+}
+
 .gradient-text {
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0;
+  color: #f8f9fa;
+  background-color: #212529 !important;
 }

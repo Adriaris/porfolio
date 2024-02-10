@@ -1,10 +1,37 @@
-<nav class="navbar">
-  <div class="logo gradient-text">Porfolio</div>
-  <div class="nav-links">
-    <a routerLink="" routerLinkActive="active" class="nav-item gradient-text" [routerLinkActiveOptions]="{exact: true}">Home</a>
-    <a routerLink="/mi-valor" routerLinkActive="active" class="nav-item gradient-text">Mi Valor</a>
-    <a routerLink="/mis-proyectos" routerLinkActive="active" class="nav-item gradient-text">Mis Proyectos</a>
-    <a routerLink="/sobre-mi" routerLinkActive="active" class="nav-item gradient-text">Sobre Mí</a>
-    <!-- Agrega más elementos si necesitas -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid" style="max-width: 1500px !important;">
+    <div class="logo gradient-text">
+      <img src="assets/images/logo.png" alt="Logo Picture" class="smaller-image">
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a routerLink="" routerLinkActive="active" class="nav-link gradient-text"
+            [routerLinkActiveOptions]="{exact: true}">
+            <i class="bi bi-house-door-fill"></i><span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/mi-valor" routerLinkActive="active" class="nav-link gradient-text">
+            <i class="bi bi-graph-up"></i><span>Mi Valor</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/mis-proyectos" routerLinkActive="active" class="nav-link gradient-text">
+            <i class="bi bi-briefcase-fill"></i><span>Proyectos</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/sobre-mi" routerLinkActive="active" class="nav-link gradient-text">
+            <i class="bi bi-person-fill"></i><span>Sobre Mí</span>
+          </a>
+        </li>
+        <!-- Agrega más elementos si necesitas -->
+      </ul>
+    </div>
   </div>
 </nav>

@@ -1,6 +1,27 @@
 <section class="intro-section">
-    <img src="/assets/images/default.png" alt="Adriá León Arís" class="profile-image">
-    <h1>¡HOLA!<br>SOY Adrià León Aris</h1>
-    <p></p>
-  </section>
-  
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-xl-6">
+        <div class="intro-content d-flex flex-column justify-content-end">
+          <div class="text-container"> <!-- Altura fija para el contenedor de texto -->
+            <h1><span class="gradient-text">Hola, soy</span></h1>
+            <p class="white-text">{{ typewriterText }}<span [class]="isBlinking ? 'cursor blinking' : 'cursor'">|</span>
+            </p>
+          </div>
+          <div class="span-desc">Estudiante residente en Barcelona. Organizada y detallista, con habilidades en la
+            gestión de proyectos y en la comunicación efectiva</div>
+          <div class="action-buttons white-text">
+            <button class="btn hire-me">Contáctame</button>
+            <button class="btn download-cv" (click)="downloadCv()">Descarga CV</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-xl-6 d-flex justify-content-center align-items-center">
+        <div class="profile-picture rounded-circle">
+          <img src="assets/images/perfil.png" alt="Profile Picture" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

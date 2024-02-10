@@ -1,0 +1,13 @@
+.mi-valor-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  color: white; /* Mantenemos el color de texto principal en blanco para coherencia */
+}
+
+.mi-valor-container p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: justify; /* Mantenemos la alineación de texto justificada para coherencia */
+}
