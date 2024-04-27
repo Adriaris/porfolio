@@ -9,5 +9,30 @@
   line-height: 1.6;
   margin-bottom: 20px;
   font-size: 18px;
-  text-align: justify; /* Mantenemos la alineación de texto justificada para coherencia */
+}
+
+.content-container {
+  padding: 120px;
+  width: 90%;
+  margin: auto;
+}
+
+.logos-container {
+  display: flex;
+  justify-content: center; /* Centra los logos horizontalmente */
+  align-items: center; /* Alinea los logos verticalmente */
+  gap: 20px; /* Espacio entre logos */
+  padding: 20px 0; /* Espacio arriba y abajo del contenedor de logos */
+}
+
+.empresa-logo {
+  max-width: 240px; /* O el tamaño que mejor se adapte a tus logos */
+  height: auto; /* Para mantener las proporciones de los logos */
+  transition: transform 0.3s; /* Transición suave para efectos de hover */
+}
+
+.empresa-logo:hover {
+  transform: scale(
+    1.1
+  ); /* Aumenta ligeramente el tamaño del logo al pasar el mouse por encima */
 }

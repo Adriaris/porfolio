@@ -1,28 +1,42 @@
-.proyectos-container {
-  max-width: 800px;
+.content-container {
+  padding: 120px;
+  width: 90%;
   margin: auto;
+}
+
+.proyectos-container {
+  display: grid; /* Continuamos con la disposición de grid */
+  grid-template-columns: 1fr 1fr; /* Ahora solo necesitamos una columna para cada proyecto */
+  gap: 20px; /* Espacio entre proyectos */
+
   padding: 20px;
-  color: white; /* Mantenemos el color de texto principal en blanco para coherencia */
+  color: white;
+}
+
+.title {
+  padding-left: 30px;
 }
 
 .proyectos-container p {
   line-height: 1.6;
   margin-bottom: 20px;
   font-size: 18px;
-  text-align: justify; /* Mantenemos la alineación de texto justificada para coherencia */
 }
 
-/*´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-/* mis-proyectos.component.css */
 .proyecto-container {
   border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 15px; /* Redondea los bordes */
-  margin-bottom: 20px; /* Espacio entre cada proyecto */
-  overflow: hidden; /* Asegura que no haya desbordamiento */
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.titulo {
+.proyecto-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 .subtitulo {
   color: white;
 }
@@ -32,11 +46,18 @@
   font-style: italic;
 }
 
+.proyecto-grid {
+  display: grid;
+  grid-template-columns: 4fr 1fr; /* 4 partes para el texto y 1 parte para la imagen, sumando 5 partes en total */
+  align-items: center;
+  gap: 20px; /* Espacio entre el texto y la imagen */
+}
+
 .proyecto-text {
-  padding: 20px; /* Espaciado interior */
+  padding: 20px;
 }
 
 .proyecto-image img {
-  width: 100%; /* Ajusta el tamaño de la imagen */
-  height: auto;
+  width: 100%; /* La imagen llena su contenedor */
+  height: auto; /* Mantiene las proporciones de la imagen */
 }

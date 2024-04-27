@@ -1,15 +1,30 @@
 .sobre-mi-container {
   max-width: 800px;
-  margin: auto;
   padding: 20px;
-  color: white; /* Color de texto principal cambiado a blanco */
+  color: white; /* El texto es blanco */
+
+  font-size: 18px; /* Tamaño de fuente adecuado */
+  line-height: 1.6;
 }
+
+.content-container {
+  width: 90%;
+  margin: auto;
+  padding: 120px;
+  display: grid; /* Usa display grid para controlar la disposición */
+  grid-template-columns: 1fr 1fr; /* Crea dos columnas, cada una toma el 50% del espacio disponible */
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
+  justify-items: center; /* Centra los elementos horizontalmente en sus celdas respectivas */
+  gap: 20px; /* Opcional: añade un espacio entre las columnas */
+  height: 100%; /* Ocupa el 100% de la altura del contenedor padre */
+}
+
+/* Incluir la fuente de Google Fonts */
 
 .sobre-mi-container p {
   line-height: 1.6;
   margin-bottom: 20px;
   font-size: 18px;
-  text-align: justify; /* Alineación de texto justificada */
 }
 
 .final-invitation {

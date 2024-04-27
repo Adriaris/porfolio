@@ -1,55 +1,71 @@
 :root {
-  /* Definiciones de colores y degradado */
+  /* Continuamos con tus definiciones de colores existentes */
   --text-gradient: linear-gradient(
     to right,
     var(--disco-500),
     var(--disco-700)
   );
-  --link-color: #dadada; /* Color gris para texto de enlaces */
-  --active-hover-color: #ffffff; /* Color blanco para hover y activo */
+  --link-color: #dadada;
+  --active-hover-color: #ffffff;
 }
 
+/* Estilos para el navbar, añadiendo el degradado de sombra */
+.navbar {
+  width: 100%; /* Asume que quieres que el navbar ocupe toda la anchura */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    /* Más oscuro en la parte superior */ rgba(0, 0, 0, 0) 100%
+      /* Transparente hacia el final */
+  );
+  color: var(--link-color);
+  position: fixed; /* O cualquier otra posición que prefieras */
+  top: 0;
+  left: 0;
+  z-index: 10; /* Asegura que el navbar esté sobre otros elementos */
+}
+
+/* Estilos para enlaces dentro del navbar */
 .navbar-nav .nav-link {
   display: flex;
   align-items: center;
-  color: gray; /* Texto gris por defecto */
+  color: white; /* Texto gris por defecto */
   text-decoration: none;
-  transition: color 0.3s, font-weight 0.3s; /* Transición suave para color y peso de fuente */
+  transition: color 0.3s, font-weight 0.3s; /* Transición suave */
 }
 
 .navbar-nav .nav-link .bi {
   font-size: 1.3rem;
-  margin-right: 5px; /* Espacio entre ícono y texto */
+  margin-right: 5px;
   background: var(--text-gradient);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent; /* Efecto de degradado para el ícono */
-  transition: background 0.3s; /* Transición suave para el degradado */
+  color: transparent; /* Efecto de degradado en el ícono */
+  transition: background 0.3s;
 }
 
-/* Establece el texto a blanco y en negrita en hover o activo */
+/* Cambio de color y negrita en hover o activo */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: white; /* Cambia a blanco */
+  color: white;
   font-weight: bold;
 }
 
-/* Técnica para evitar el movimiento de íconos: envuelve el texto en un span y maneja el cambio de fuente en él */
+/* Manejo del texto en enlaces para evitar desplazamientos */
 .navbar-nav .nav-link span {
-  font-weight: 400; /* Inicia con el peso de fuente normal */
-  transition: font-weight 0.1s; /* Transición suave para el peso de la fuente */
+  font-weight: 400;
+  transition: font-weight 0.1s;
   width: 5rem;
   text-align: left;
 }
 
 .navbar-nav .nav-link:hover span,
 .navbar-nav .nav-link.active span {
-  font-weight: bold; /* Cambia a negrita en hover o activo */
+  font-weight: bold;
 }
 
+/* Para imágenes más pequeñas dentro del navbar, si las usas */
 .smaller-image {
   width: 3rem;
   height: auto;
 }
-
-/* Asegúrate de incluir las variables de color y cualquier otro ajuste de estilo global que desees. */
