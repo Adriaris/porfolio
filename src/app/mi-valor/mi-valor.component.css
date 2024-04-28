@@ -1,7 +1,6 @@
 .mi-valor-container {
   max-width: 800px;
   margin: auto;
-  padding: 20px;
   color: white; /* Mantenemos el color de texto principal en blanco para coherencia */
 }
 
@@ -12,7 +11,8 @@
 }
 
 .content-container {
-  padding: 120px;
+  display: flex;
+  padding: 20px 120px 120px 120px;
   width: 90%;
   margin: auto;
 }
@@ -35,4 +35,34 @@
   transform: scale(
     1.1
   ); /* Aumenta ligeramente el tamaño del logo al pasar el mouse por encima */
+}
+
+.left-column,
+.right-column {
+  flex: 1.5; /* Asigna igual espacio a ambas columnas */
+}
+
+/*-----------------------------------------------*/
+
+.right-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  width: fit-content;
+  margin: auto;
+}
+
+.tech-grid img {
+  width: 150px;
+  transition: transform 0.3s;
+}
+
+.tech-grid img:hover {
+  transform: scale(1.1);
 }

@@ -1,5 +1,5 @@
 .content-container {
-  padding: 120px;
+  padding: 20px 120px 120px 120px;
   width: 90%;
   margin: auto;
 }
@@ -9,7 +9,6 @@
   grid-template-columns: 1fr 1fr; /* Ahora solo necesitamos una columna para cada proyecto */
   gap: 20px; /* Espacio entre proyectos */
 
-  padding: 20px;
   color: white;
 }
 
